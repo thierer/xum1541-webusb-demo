@@ -68,7 +68,7 @@ async function xum1541status() {
     try {
       const cbmDevice = parseInt(document.getElementById('cbmdevice').value);
       if (cbmDevice >= 8 || cbmDevice <= 11) {
-        status = await getStatus(parseInt(cbmDevice, 10));
+        status = await getStatus(cbmDevice);
       }
     } catch(err) {
       status = err.toString();
